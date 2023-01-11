@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+  </head>
+  <body>
+      <%- include('../partials/navbar') %>
+      <form action="/add/branch" method="post" class="form">
+        <h1>Add Branch</h1>
+        <div class="info">
+           
+                <section>
+                    <label for="Location">Enter Location:</label>
+                    <input type="text" id="Location" placeholder="Location" name="Location">
+                </section>
+                <section>
+                    <label for="IFSC_Code">Enter IFSC Code:</label>
+                    <input type="text" name="IFSC_Code" id="IFSC_Code" placeholder="IFSC_Code">
+                </section>
+                <section>
+                    <label for="Bank_Code">Enter Bank Code:</label>
+                    <input type="text" name="Bank_Code" id="Bank_Code" placeholder="Bank_Code">
+                </section>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

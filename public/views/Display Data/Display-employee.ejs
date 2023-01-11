@@ -1,0 +1,44 @@
+<%- include('../partials/header') %> 
+    <title>Employee Data</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>Employee Data</h1>
+    <a href="/add/employee" class="btn btn-success btn">Add</a>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>SSN</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Contact No</th>
+                    <th>Address</th>
+                    <th>IFSC Code</th>
+                </tr>
+                <%
+                if(sampleData.length > 0)
+                {
+                    sampleData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%= data.SSN %></td>
+                    <td><%= data.Name %></td>
+                    <td><%= data.Email %></td>
+                    <td><%= data.Contact_No %></td>
+                    <td><%= data.Address %></td>
+                    <td><%= data.IFSC_Code %></td>
+                    <td>
+                                    <a href="/employee/edit/<%= data.SSN %>" class="btn btn-primary btn">Edit</a>
+                                    <a href="/employee/delete/<%= data.SSN %>" class="btn-danger btn">Delete</a>
+                    </td>
+                </tr>
+                <%
+                    });
+                 }
+                %>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

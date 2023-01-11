@@ -1,0 +1,42 @@
+<%- include('../partials/header') %> 
+    <title>Customer Data</title>
+</head>
+<body>
+    <%- include('../partials/navbar') %>
+    <h1>Customer Data</h1>
+    <a href="/add/customer" class="btn btn-success btn ">Add</a>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <tr>
+                    <th>Name</th>
+                    <th>Customer Id</th>
+                    <th>Email</th>
+                    <th>Contact No</th>
+                    <th>Address</th>
+                </tr>
+                <%
+                if(sampleData.length > 0)
+                {
+                    sampleData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%= data.Name %></td>
+                    <td><%= data.Customerid %></td>
+                    <td><%= data.Email %></td>
+                    <td><%= data.Contact %></td>
+                    <td><%= data.Address %></td>
+                    <td>
+                                    <a href="/customer/edit/<%= data.SSN %>" class="btn btn-primary btn">Edit</a>
+                                    <a href="/customer/delete/<%= data.SSN %>" class="btn-danger btn">Delete</a>
+                    </td>
+                </tr>
+                <%
+                    });
+                 }
+                %>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

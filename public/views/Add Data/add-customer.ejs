@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+  </head>
+  <body>
+      <%- include('../partials/navbar') %>
+      <form action="/add/customer" method="post" class="form">
+        <h1>Add Employee</h1>
+        <div class="info">
+           
+                <section>
+                <label for="Name">Enter Customer Name:</label>
+                <input type="text" name="Name" id="Name" placeholder="Name">
+                </section>
+                <section>
+                    <label for="Customer_ID">Enter Customer_ID:</label>
+                    <input type="text" id="Customer_ID" placeholder="Customer_ID" name="Customer_ID">
+                </section>
+                <section>
+                    <label for="Email">Enter Customer Email:</label>
+                    <input type="text" name="Email" id="Email" placeholder="Email">
+                </section>
+                <section>
+                    <label for="Contact_No">Enter Customer Contact No:</label>
+                    <input type="text" name="Contact_No" id="Contact_No" placeholder="Contact_No">
+                </section>
+                <section>
+                    <label for="Address">Enter Customer Address:</label>
+                    <input type="text" name="Address" id="Address" placeholder="Address">
+                </section>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
